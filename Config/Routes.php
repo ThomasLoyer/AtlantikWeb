@@ -17,3 +17,4 @@ $routes->get('deconnexion', 'Utilisateur::deconnexion', ['filter' => 'Utilisateu
 $routes->get('reserver/(:num)', 'Utilisateur::reserver/$1', ['filter' => 'UtilisateurConnecte']);
 $routes->post('traiterreservation', 'Utilisateur::traiterReservation', ['filter' => 'UtilisateurConnecte']);
 $routes->match(['get', 'post'],'modifiercompte', 'Utilisateur::formModifierCompte',['filter' => 'UtilisateurConnecte']);
+$routes->get('historiquereservation', 'Utilisateur::historiqueReservation', ['filter' => 'UtilisateurConnecte']);

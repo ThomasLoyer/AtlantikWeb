@@ -9,6 +9,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
+            
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="/accueil">Accueil</a>
@@ -26,6 +27,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/afficherhorraire">Horraires de traversées</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/historiquereservation">Historique des réservations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/authentification">S'authentifier</a>

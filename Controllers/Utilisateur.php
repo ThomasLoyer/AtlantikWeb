@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\ModeleClient;
 use App\Models\ModeleLiaison;
+use App\Models\ModeleReservation;
 use App\Models\ModeleSecteur;
 use App\Models\ModeleTraversee;
 
@@ -90,5 +91,17 @@ Class Utilisateur extends BaseController
         return  view("templates/header").
                 view("Visiteur/vue_Accueil").
                 view("templates/footer");
+    }
+    public function historiqueReservation()
+    {
+        $session = session();
+
+        $modReservation = new ModeleReservation();
+        $historique = $modReservation->getInfoReservation($session->get('ID'));
+        $data['lesReservations'] = $historique;
+
+        return  view('templates/header').
+                view('Utilisateur/vue_HistoriqueReservations', $data).
+                view('templates/footer');
     }
 }
